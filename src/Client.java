@@ -9,11 +9,11 @@ public class Client {
     private PrintWriter out;
     private BufferedReader input;
 
-    public void starConnection(String ipAddress, Integer port) throws IOException{
+    public void startConnection(String ipAddress, Integer port) throws IOException {
         clientSocket = new Socket(ipAddress, port);
         out = new PrintWriter(clientSocket.getOutputStream(), true);
         input = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-        System.out.println("Cliente connected!...");
+        System.out.println("Client connected! ...");
     }
 
     public String sendMessage(String msg) throws IOException {
